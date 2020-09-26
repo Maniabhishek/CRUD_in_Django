@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+<h3>Are you sure you want to delete {{bat.title}}</h3>
+
+<input type="submit" value="yes">
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail View</title>
+</head>
+<body>
+    <h2>{{ detailv.title }}</h2>
+    <p>{{ detailv.text }}</p>
+
+    <h4><a href="{% url 'article_edit' detailv.pk %}">Edit your article</a></h4>
+    <h4><a href="{% url 'article_delete' detailv.pk %}">Delete your article</a></h4>
+</body>
+</html>
+{% endblock %}
